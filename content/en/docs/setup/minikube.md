@@ -54,6 +54,10 @@ Starting local Kubernetes cluster...
 
 $ kubectl run hello-minikube --image=k8s.gcr.io/echoserver:1.10 --port=8080
 deployment.apps/hello-minikube created
+
+Note : kubectl run --generator=deployment/apps.v1 is DEPRECATED and will be removed in a future version. 
+Use kubectl run --generator=run-pod/v1 or kubectl create instead.
+
 $ kubectl expose deployment hello-minikube --type=NodePort
 service/hello-minikube exposed
 
